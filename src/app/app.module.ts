@@ -8,6 +8,9 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { NavComponent } from './components/shared/nav/nav.component';
 import { BookstoreAppComponent } from './components/bookstore-app/bookstore-app.component';
 import { ProductListComponent } from './components/bookstore-app/product-list/product-list.component';
+import { FiltersComponent } from './components/bookstore-app/filters/filters.component';
+import { ProductItemComponent } from './components/bookstore-app/product-list/product-item/product-item.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,13 +19,16 @@ import { ProductListComponent } from './components/bookstore-app/product-list/pr
     FooterComponent,
     NavComponent,
     BookstoreAppComponent,
-    ProductListComponent
+    ProductListComponent,
+    FiltersComponent,
+    ProductItemComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [BookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
